@@ -1,5 +1,5 @@
 import Container from "../src/components/Container";
-import Joblist from "../src/components/JobList";
+import Joblist from "../src/components/Joblist";
 import Layout from "../src/components/Layout";
 import {useState, useEffect} from 'react';
 
