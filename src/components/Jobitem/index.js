@@ -1,7 +1,7 @@
 import Filter from "../Filter";
 import { Company, Filters, Info, Pill, StyledItem, Title } from "./style";
 
-export default function Jobitem({job}) {
+export default function Jobitem({job, addFilter}) {
     const filters = [job.role, job.level, ...job.languages, ...job.tools]
     return (
         <>
@@ -34,9 +34,10 @@ export default function Jobitem({job}) {
                     <span>{job.location}</span>
                 </div>
               </Info>
+              <span className="hr"></span>
               <Filters>
                   {filters.map(filter => (
-                      <Filter key={filter} filter={filter}/>
+                      <Filter key={filter} filter={filter} addFilter={addFilter}/>
                   ))}
               </Filters>
           </StyledItem>

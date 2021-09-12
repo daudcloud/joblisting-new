@@ -10,6 +10,34 @@ export const StyledItem = styled.div`
     padding: 2rem 2.5rem;
     position: relative;
 
+    .hr {
+        display: none;
+        width: 100%;
+        border-top: 1px solid hsl(180, 8%, 52%);
+    }
+
+    @media (max-width:950px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1.5rem;
+        gap: 20px;
+
+        .filters {
+            margin-left: 0;
+        }
+
+        img {
+            width: 50px;
+            position: absolute;
+            top: 0;
+            transform: translateY(-50%);
+        }
+
+        .hr {
+            display: block;
+        }
+    }
+
     &.featured::before {
         content: "";
         position: absolute;
@@ -20,6 +48,8 @@ export const StyledItem = styled.div`
         bottom: 0;
         width: .35rem;
     }
+
+    
 `
 
 export const Company = styled.h4`
@@ -41,6 +71,16 @@ export const Pill = styled.span`
 export const Title = styled.h1`
     color: hsl(180, 14%, 20%);
     font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.1s linear;
+
+    &:hover {
+        color: hsl(180, 29%, 50%);
+    }
+
+    @media (max-width: 950px) {
+        font-size: 1rem;
+    }
 `
 
 export const Info = styled.div`
@@ -61,10 +101,24 @@ export const Info = styled.div`
         font-size: .9rem;
         gap: .8rem;
     }
+
+    @media (max-width: 950px) {
+        margin-left: 0;
+        gap: 15px;
+
+        .info-footer {
+            font-size: .8rem;
+        }
+    }
 `
 
 export const Filters = styled.div`
     margin-left: auto;
     gap: 1rem;
     display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 950px) {
+        margin-left: 0;
+    }
 `

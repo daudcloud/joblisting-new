@@ -5,6 +5,11 @@ export const Header = styled.header `
     height: 30vh;
     width: 100%;
 
+    @media (max-width: 700px) {
+        height: 20vh;
+        width: 100%;
+    }
+
     img {
         height: 100%;
         width: 100%;

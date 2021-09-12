@@ -5,4 +5,9 @@ export const StyledList = styled.ul`
     flex-direction: column;
     gap: 24px;
     padding: 5rem 0;
+    position: relative;
+
+    @media (max-width: 950px) {
+        gap: 45px;
+    }
 `

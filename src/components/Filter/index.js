@@ -1,8 +1,8 @@
 import { FilterItem } from "./style";
 
-export default function Filter({filter}) {
+export default function Filter({filter, addFilter}) {
     return (
-        <FilterItem>
+        <FilterItem onClick={() => addFilter(filter)}>
             {filter}
         </FilterItem>
     )
