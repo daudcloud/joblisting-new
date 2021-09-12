@@ -25,7 +25,7 @@ export default function Home() {
   }
   
   useEffect(() => {
-    fetch("http://localhost:3000/api/joblist")
+    fetch("https://joblisting-new.vercel.app/api/joblist")
       .then(res => res.json())
       .then(data => setJobs(data))
   }, []);
