@@ -16,6 +16,12 @@ export const StyledItem = styled.div`
         border-top: 1px solid hsl(180, 8%, 52%);
     }
 
+    .img {
+        width: 90px;
+        height: 90px;
+        position: relative;
+    }
+
     @media (max-width:950px) {
         flex-direction: column;
         align-items: flex-start;
@@ -26,15 +32,15 @@ export const StyledItem = styled.div`
             margin-left: 0;
         }
 
-        img {
-            width: 50px;
-            position: absolute;
-            top: 0;
-            transform: translateY(-50%);
-        }
-
         .hr {
             display: block;
+        }
+
+        .img {
+            position: absolute;
+            top: -22px;
+            width: 45px;
+            height: 45px;
         }
     }
 

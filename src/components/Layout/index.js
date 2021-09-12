@@ -9,8 +9,12 @@ export default function Layout({children}) {
             <title>Job Listing</title>
         </Head>
             <Header>
-                <img className="desktop" src="/images/bg-header-desktop.svg" alt="bg-desktop" />
-                <img className="mobile" src="/images/bg-header-mobile.svg" alt="bg-mobile" />
+                <div className="desktop">
+                    <Image layout="fill" src="/images/bg-header-desktop.svg" alt="bg-desktop" />
+                </div>
+                <div className="mobile">
+                    <Image layout="fill" src="/images/bg-header-mobile.svg" alt="bg-mobile" />
+                </div>
             </Header>
             <main>
                 {children}

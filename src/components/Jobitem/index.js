@@ -1,12 +1,15 @@
 import Filter from "../Filter";
 import { Company, Filters, Info, Pill, StyledItem, Title } from "./style";
+import Image from 'next/image'
 
 export default function Jobitem({job, addFilter}) {
     const filters = [job.role, job.level, ...job.languages, ...job.tools]
     return (
         <>
           <StyledItem className={job.featured ? "featured" : ""}>
-              <img src={job.logo} alt="logo" />
+              <div className="img">
+                <Image className="img" src={job.logo} layout="fill" alt="logo" />
+              </div>
               <Info>
                 <div className="info-header">
                 <Company>

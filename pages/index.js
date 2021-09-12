@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react';
 
 export default function Home() {
   const [jobs, setJobs] = useState([]);
-  const [filters, setFilters] = useState(["Frontend"]);
+  const [filters, setFilters] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
 
   const addFilter = (filter) => {
@@ -42,7 +42,7 @@ export default function Home() {
       tempJobs.push(job)
     })
     setFilteredJobs(tempJobs)
-  }, [filters])
+  }, [filters, jobs])
 
   return (
     <Layout>
